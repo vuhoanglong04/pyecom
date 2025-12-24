@@ -2,3 +2,5 @@ db.sqlite3
 identifier.sqlite
 .idea
 .env
+__pycache__/
+*.py[cod]
