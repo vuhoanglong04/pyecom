@@ -1,5 +1,4 @@
 import os
-
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -23,7 +22,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.users'
+    'rest_framework',
+    'apps.users',
+    'apps.categories',
+    'apps.products',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +67,7 @@ DATABASES = {
         "PORT": os.getenv("POSTGRES_PORT"),
     }
 }
-
+AUTH_USER_MODEL = "users.User"
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
